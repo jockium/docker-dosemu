@@ -1,4 +1,4 @@
-FROM jgoerzen/supervisor
+FROM jockium/docker-supervisor
 MAINTAINER John Goerzen <jgoerzen@complete.org>
 # dosemu is in contrib
 RUN sed -i 's/main/main contrib/g' /etc/apt/sources.list
