@@ -10,7 +10,7 @@ RUN apt-get update && \
     apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 #dosemu no longer in contrib
 ADD https://master.dl.sourceforge.net/project/dosemu/dosemu/1.4.0/dosemu-1.4.0-1.i386.rpm?viasf=1 /tmp
-RUN dpkg -i -y /tmp/dosemu-1.4.0-1.i386.rpm 
+RUN dpkg -i /tmp/dosemu-1.4.0-1.i386.rpm 
 
 COPY scripts/ /usr/local/bin/
 COPY supervisor/ /etc/supervisor/conf.d/
