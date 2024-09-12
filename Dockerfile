@@ -10,7 +10,7 @@ RUN apt-get update && \
             tigervnc-viewer tcpser ser2net socat liblockfile-bin libasound2 libgpm2 libsdl1.2debian  libslang2 libsndfile1 && \
     apt-get update && \
     add-apt-repository ppa:dosemu2/ppa &&\
-    apt-get -y --no-install-recommends dosemu2 && \
+    apt-get -y --no-install-recommends install dosemu2 && \
     apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 #dosemu no longer in contrib
 ADD http://archive.debian.org/debian-archive/debian/pool/contrib/d/dosemu/dosemu_1.4.0.7+20130105+b028d3f-2+b1_amd64.deb /tmp
