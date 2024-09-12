@@ -5,7 +5,7 @@ RUN apt-get update && \
     apt-get -y -u dist-upgrade && \
     apt-get -y --no-install-recommends install wget tightvncserver xfonts-base \
             lwm xterm vim-tiny less ca-certificates balance software-properties-common \
-            zip unzip pwgen xdotool telnet nano procps gpg dirmngr \
+            zip unzip pwgen xdotool telnet nano procps gpg gpg-agent dirmngr \
             mtools dosfstools dos2unix inetutils-telnetd openbsd-inetd \
             tigervnc-viewer tcpser ser2net socat liblockfile-bin libasound2 libgpm2 libsdl1.2debian  libslang2 libsndfile1 && \
     apt-get update && \
