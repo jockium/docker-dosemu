@@ -7,7 +7,7 @@ RUN apt-get update && \
             lwm xterm vim-tiny less ca-certificates balance software-properties-common \
             zip unzip pwgen xdotool telnet nano procps \
             mtools dosfstools dos2unix inetutils-telnetd openbsd-inetd \
-            tigervnc-viewer tcpser ser2net socat liblockfile-bsin libasound2 libgpm2 libsdl1.2debian  libslang2 libsndfile1 && \
+            tigervnc-viewer tcpser ser2net socat liblockfile-bin libasound2 libgpm2 libsdl1.2debian  libslang2 libsndfile1 && \
     apt-get update && \
     add-apt-repository ppa:dosemu2/ppa &&\
     apt-get -y --no-install-recommends dosemu2 && \
