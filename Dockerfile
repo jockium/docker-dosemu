@@ -19,11 +19,11 @@ RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-keys EBE1B5DED2AD45D6
 # ADD http://archive.debian.org/debian-archive/debian/pool/contrib/d/dosemu/dosemu_1.4.0.7+20130105+b028d3f-2+b1_amd64.deb /tmp
 # RUN dpkg -i /tmp/dosemu_1.4.0.7+20130105+b028d3f-2+b1_amd64.deb 
 
-COPY scripts/ /usr/local/bin/
-COPY supervisor/ /etc/supervisor/conf.d/
-COPY setup/ /tmp/setup/
-COPY autoexec.bat /etc/dosemu/freedos/autoexec.bat
-RUN /tmp/setup/setup.sh && rm -r /tmp/setup
+# COPY scripts/ /usr/local/bin/
+# COPY supervisor/ /etc/supervisor/conf.d/
+# COPY setup/ /tmp/setup/
+# COPY autoexec.bat /etc/dosemu/freedos/autoexec.bat
+# RUN /tmp/setup/setup.sh && rm -r /tmp/setup
 
 EXPOSE 5901
 CMD ["/usr/local/bin/boot-supervisord"]
