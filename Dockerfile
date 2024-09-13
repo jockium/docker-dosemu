@@ -12,11 +12,11 @@ RUN add-apt-repository ppa:dosemu2/ppa
 RUN mkdir ~/.gnupg
 RUN echo "disable-ipv6" >> ~/.gnupg/dirmngr.conf
 RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-keys EBE1B5DED2AD45D6
-RUN apt-get update && \
-    apt-get -y install dosemu2 install-freedos && \
-    apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+# RUN apt-get update && \
+#     apt-get -y install dosemu2 install-freedos && \
+#     apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 #dosemu no longer in contrib
-ADD http://archive.debian.org/debian-archive/debian/pool/contrib/d/dosemu/dosemu_1.4.0.7+20130105+b028d3f-2+b1_amd64.deb /tmp
+# ADD http://archive.debian.org/debian-archive/debian/pool/contrib/d/dosemu/dosemu_1.4.0.7+20130105+b028d3f-2+b1_amd64.deb /tmp
 # RUN dpkg -i /tmp/dosemu_1.4.0.7+20130105+b028d3f-2+b1_amd64.deb 
 
 COPY scripts/ /usr/local/bin/
