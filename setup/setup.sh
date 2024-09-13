@@ -8,6 +8,7 @@ cd /usr/local/bin
 ln -s /usr/bin/vim.tiny vim
 ln -s /usr/bin/vim.tiny vi
 
+mkdir /etc/dosemu/drives
 for DRIVE in e f g h i j k; do
   mkdir -p /dos/drive_$DRIVE
   ln -s /dos/drive_$DRIVE /etc/dosemu/drives/$DRIVE
