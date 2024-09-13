@@ -9,6 +9,8 @@ RUN apt-get update && \
             mtools dosfstools dos2unix inetutils-telnetd openbsd-inetd \
             tigervnc-viewer tcpser ser2net socat liblockfile-bin libasound2 libgpm2 libsdl1.2debian  libslang2 libsndfile1 
 RUN add-apt-repository ppa:dosemu2/ppa
+RUN mkdir ~/.gnupg
+RUN echo "disable-ipv6" >> ~/.gnupg/dirmngr.conf
 RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-keys EBE1B5DED2AD45D6
 RUN apt-get update && \
     apt-get -y install dosemu2 install-freedos && \
